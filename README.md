@@ -30,7 +30,7 @@ Example HTML file:
 <html>
   <head>
     <title>Simple example</title>
-    <script src="http://github.com/phortx/simitar/v/0.2/_.js"></script>
+    <script src="http://github.com/phortx/simitar/v/0.1/_.js"></script>
   </head>
   
   <body>
@@ -63,7 +63,7 @@ Theming is pretty simple. You know bootswatch.com? Now you do. Just take the nam
 <html>
   <head>
     <title>Simple theming example</title>
-    <script src="http://github.com/phortx/simitar/v/0.2/_.js"></script>
+    <script src="http://github.com/phortx/simitar/v/0.1/_.js"></script>
   </head>
   
   <body class="theme-cosmos">
