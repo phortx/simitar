@@ -17,8 +17,8 @@ function run() {
 
 
 	// Load resources
-	$head.append('<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" />');
-	$head.append('<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />');
+	$head.append('<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" type="text/css" />');
+	$head.append('<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" type="text/css" />');
 	$head.append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />');
 	$head.append('<script src="' + basePath + 'marked.js"></script>');
 	$head.append('<script src="' + basePath + 'prettify/prettify.js"></script>');
@@ -37,8 +37,8 @@ function run() {
 	}
 
 	// Simitar and Prettify CSS
-	$head.append('<link href="' + basePath + 'prettify/prettify.css" rel="stylesheet" />');
-	$head.append('<link href="' + basePath + 'simitar.css" rel="stylesheet" />');
+	$head.append('<link href="' + basePath + 'prettify/prettify.css" rel="stylesheet" type="text/css" />');
+	$head.append('<link href="' + basePath + 'simitar.css" rel="stylesheet" type="text/css" />');
 
 
 	// Workaround for possible loading problems
@@ -50,13 +50,13 @@ function run() {
 		}
 	}
 
-	recurFn();
+	window.setTimeout(recurFn, 1000);
 }
 
 function finish() {
 	var $body = $('body'),
 		$container = $('.container');
-	
+
 	// Parse markdown
 	marked.setOptions({
 		gfm: true,
