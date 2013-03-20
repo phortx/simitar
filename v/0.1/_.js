@@ -6,6 +6,7 @@ function run() {
 
 	var basePath = '';
 	$('script').each(function(i, script) {
+		script = $(script);
 		if (script.attr('src').match('/.*_.js$/')) {
 			basePath = script.attr('src');
 		}
