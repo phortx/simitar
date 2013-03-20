@@ -43,46 +43,47 @@ function run() {
 	$head.append('<link href="' + basePath + 'prettify/prettify.css" rel="stylesheet" />');
 	$head.append('<link href="' + basePath + 'simitar.css" rel="stylesheet" />');
 
-
-	// Parse markdown
-	marked.setOptions({
-		gfm: true,
-		tables: true,
-		breaks: true,
-		pedantic: false,
-		sanitize: false,
-		smartLists: true,
-		langPrefix: 'language-',
-		highlight: function(code, lang) {
-			if (lang === 'js') {
-				return highlighter.javascript(code);
+	window.setTimeout(function() {
+		// Parse markdown
+		marked.setOptions({
+			gfm: true,
+			tables: true,
+			breaks: true,
+			pedantic: false,
+			sanitize: false,
+			smartLists: true,
+			langPrefix: 'language-',
+			highlight: function(code, lang) {
+				if (lang === 'js') {
+					return highlighter.javascript(code);
+				}
+				return code;
 			}
-			return code;
-		}
-	});
+		});
 
-	$container.html(marked(window._markdown));
+		$container.html(marked(window._markdown));
 
 
-	// Prettify
-	$('pre').each(function(i, el) {
-		el = $(el);
-		el.addClass('prettyprint lang-' + el.attr('class'));
-		el.html(el.html().trim());
-	});
+		// Prettify
+		$('pre').each(function(i, el) {
+			el = $(el);
+			el.addClass('prettyprint lang-' + el.attr('class'));
+			el.html(el.html().trim());
+		});
 
-	prettyPrint();
+		prettyPrint();
 
-	$('pre').wrap('<div class="well" />');
-
-
-	// Icons
-	var html = $container.html().replace(/\{\{([^ ]+)\}\}/g, '<i class="icon icon-$1"></i>');
-	$container.html(html);
+		$('pre').wrap('<div class="well" />');
 
 
-	// Finished, show body
-	$body.show();
+		// Icons
+		var html = $container.html().replace(/\{\{([^ ]+)\}\}/g, '<i class="icon icon-$1"></i>');
+		$container.html(html);
+
+
+		// Finished, show body
+		$body.show();
+	}, 1);
 }
 
 // Load jquery and call init function
