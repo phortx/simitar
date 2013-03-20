@@ -8,7 +8,7 @@ function run() {
 	var basePath = '';
 	$('script').each(function(i, script) {
 		script = $(script);
-		if (script.attr('src').match('/_.js$')) {
+		if (script.attr('src').match('/simitar.js$')) {
 			basePath = script.attr('src');
 		}
 	});
