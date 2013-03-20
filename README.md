@@ -5,7 +5,7 @@ Want to see that in action? Visit http://phortx.github.com/simitar/ it's fully g
 
 
 # Why?
-Many time I just want to put a nice formatted document somewhere on my server to provide an howto for someone, write down some things for myself, share concepts, and so on. But plain HTML takes much effort to write and looks really ugly without any CSS. I just want to write text, not CSS. So a framework would be nice. Markdown would be nice. But server side processing is needless overhead for that use case. So what I want is a very easy, lightwight but yet powerful way to write documents fast on the webserver and share them with a fancy, readable layout and stuff. So simitar was born!
+Many times I just want to put a nice formatted document somewhere on my server to provide an howto for someone, write down some things for myself, share concepts, and so on. But plain HTML takes much effort to write and looks really ugly without any CSS. I just want to write text, not CSS. So a framework would be nice. Markdown would be nice. But server side processing is needless overhead for that use case. So what I want is a very easy, lightwight but yet powerful way to write documents fast on the webserver and share them with a fancy, readable layout and stuff. So simitar was born!
 
 
 # Features
