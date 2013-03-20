@@ -28,15 +28,17 @@ Example HTML file:
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple example</title>
-    <script src="http://github.com/phortx/simitar/v/0.1/_.js"></script>
-  </head>
-  
-  <body>
-    # Hello, world!
-    Your markdown goes _here_
-  </body>
+<head>
+  <title>Simple example</title>
+  <script src="https://raw.github.com/phortx/simitar/gh-pages/v/0.1/_.js"></script>
+</head>
+
+<body>
+
+# Hello, world!
+Your markdown goes _here_
+
+</body>
 </html>
 ```
 
@@ -61,15 +63,17 @@ Theming is pretty simple. You know bootswatch.com? Now you do. Just take the nam
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple theming example</title>
-    <script src="http://github.com/phortx/simitar/v/0.1/_.js"></script>
-  </head>
-  
-  <body class="theme-cosmos">
-    # Hello, world!
-    This is the **Cosmos Theme**!
-  </body>
+<head>
+  <title>Simple theming example</title>
+  <script src="https://raw.github.com/phortx/simitar/gh-pages/v/0.1/_.js"></script>
+</head>
+
+<body class="theme-cosmos">
+
+# Hello, world!
+This is the **Cosmos Theme**!
+
+</body>
 </html>
 ```
 

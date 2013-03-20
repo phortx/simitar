@@ -4,12 +4,21 @@
 function run() {
 	var $body = $('body');
 
+	var basePath = '';
+	$('script').each(function(i, script) {
+		if (script.attr('src').match('/.*_.js$/')) {
+			basePath = script.attr('src');
+		}
+	});
 	
-	// Bootstrap & Marked
-	$body.append('<script src="marked.js"></script>')
+	basePath = basePath.substr(0, basePath.lastIndexOf('/')) + '/';
+
+	
+	// Load resources
+	$body.append('<script src="' + basePath + 'marked.js"></script>')
 	$body.append('<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>');
 	$body.append('<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />');
-	$body.append('<link href="simitar.css" rel="stylesheet" />');
+	$body.append('<link href="' + basePath + 'simitar.css" rel="stylesheet" />');
 	$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />')
 
 
@@ -42,7 +51,6 @@ function init() {
 	var body = window.document.body;
 	body.style.display = 'none';
 	window._markdown = body.innerHTML;
-	console.log(body.innerHTML);
 	body.innerHTML = '';
 
 	var script = window.document.createElement("script");
