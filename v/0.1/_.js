@@ -43,8 +43,7 @@ function run() {
 
 	// Workaround for possible loading problems
 	var recurFn = function() {
-		console.log(marked)
-		if (marked != undefined && prettyPrint != undefined) {
+		if (typeof marked != "undefined" && typeof prettyPrint != "undefined") {
 			finish();
 		} else {
 			window.setTimeout(recurFn, 200);
