@@ -44,6 +44,7 @@ Your markdown goes _here_
 As you see, theres no magic. Just place your markdown in the body and make sure the script tag in somewhere in your HTML file.
 
 **Hint:** You can even use any HTML markup you want in the body, just mix it with your markdown, it will work!
+
 **Attention:** Be careful if you want to display HTML-Code. You should replace all <code>&lt;</code> with <code>&amp;lt;</code>, same with <code>&gt;</code> and wrap it in a <code>pre</code>-Tag.
 
 
@@ -58,7 +59,7 @@ Just take the name next to the icon, remove the "icon-" part and place the name 
 
 
 # Themes
-Theming is pretty simple. You know bootswatch.com? Now you do. Just take the name of a theme you like and put it as class name into your body, prefixed with "theme-":
+Theming is pretty simple. You know [bootswatch.com](http://bootswatch.com)? Now you do. Just take the name of a theme you like and put it as class name into your body, prefixed with "theme-":
 
 ```html
 <!DOCTYPE html>
@@ -87,7 +88,9 @@ This is the **Cosmos Theme**!
 
 
 
-# Licence
+# License
+simitar is licensed under the MIT License.
+
 Copyright (c) 2013 Benjamin Kammerl aka phortx
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
