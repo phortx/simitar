@@ -17,3 +17,7 @@ pre.prettyprint {
   background: transparent none;
   margin: 0;
 }
+
+[class^="icon-"], [class*=" icon-"] {
+	background-image: none !important;
+}
